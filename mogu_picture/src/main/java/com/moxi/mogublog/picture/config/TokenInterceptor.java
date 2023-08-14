@@ -15,8 +15,8 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * token拦截器
  *
- * @author: 陌溪
- * @create: 2020-06-14-21:55
+ * @author 陌溪
+ * @date  2020-06-14-21:55
  */
 public class TokenInterceptor extends HandlerInterceptorAdapter {
 

@@ -26,8 +26,8 @@ import java.util.stream.Collectors;
 /**
  * ElasticSearch RestAPI
  *
- * @author: 陌溪
- * @create: 2020年1月15日16:26:16
+ * @author 陌溪
+ * @date  2020年1月15日16:26:16
  */
 @RequestMapping("/search")
 @Api(value = "ElasticSearch相关接口", tags = {"ElasticSearch相关接口"})

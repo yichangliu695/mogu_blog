@@ -13,8 +13,8 @@ import java.util.List;
 /**
  * 蘑菇文件操作
  *
- * @author: 陌溪
- * @create: 2020-06-16-9:33
+ * @author 陌溪
+ * @date  2020-06-16-9:33
  */
 @Slf4j
 public class MoGuFileUtil {

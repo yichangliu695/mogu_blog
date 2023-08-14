@@ -37,8 +37,8 @@ import java.util.*;
 /**
  * FreemarkController
  *
- * @author: 陌溪
- * @create: 2020-03-04-11:23
+ * @author 陌溪
+ * @date  2020-03-04-11:23
  */
 @RequestMapping("freemarker")
 @RefreshScope

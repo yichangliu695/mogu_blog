@@ -20,8 +20,8 @@ import java.util.List;
 /**
  * 本地对象存储服务 Minio上传工具类
  *
- * @author: 陌溪
- * @create: 2020-10-19-10:22
+ * @author 陌溪
+ * @date  2020-10-19-10:22
  */
 @Component
 @Slf4j

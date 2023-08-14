@@ -11,7 +11,7 @@ import lombok.Data;
  * SubjectItemVO
  *
  * @author 陌溪
- * @create: 2020年8月22日21:53:40
+ * @date  2020年8月22日21:53:40
  */
 @Data
 public class SubjectItemVO extends BaseVO<SubjectItemVO> {

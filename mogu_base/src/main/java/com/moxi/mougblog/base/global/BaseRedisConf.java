@@ -4,7 +4,7 @@ package com.moxi.mougblog.base.global;
  * Redis常量基类
  *
  * @author 陌溪
- * @create: 2020-03-06-20:43
+ * @date  2020-03-06-20:43
  */
 public class BaseRedisConf {
 

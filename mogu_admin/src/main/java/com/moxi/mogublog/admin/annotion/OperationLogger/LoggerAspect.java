@@ -53,7 +53,6 @@ public class LoggerAspect {
 
     @Pointcut(value = "@annotation(operationLogger)")
     public void pointcut(OperationLogger operationLogger) {
-
     }
 
     @Around(value = "pointcut(operationLogger)")
@@ -67,7 +66,6 @@ public class LoggerAspect {
         try {
             // 日志收集
             handle(joinPoint);
-
         } catch (Exception e) {
             log.error("日志记录出错!", e);
         }
@@ -77,7 +75,7 @@ public class LoggerAspect {
 
 
     @AfterThrowing(value = "pointcut(operationLogger)", throwing = "e")
-    public void doAfterThrowing(JoinPoint joinPoint, OperationLogger operationLogger, Throwable e) throws Exception {
+    public void doAfterThrowing(JoinPoint joinPoint, OperationLogger operationLogger, Throwable e) {
 
         ExceptionLog exception = new ExceptionLog();
         HttpServletRequest request = RequestHolder.getRequest();

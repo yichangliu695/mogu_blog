@@ -28,8 +28,8 @@ import java.util.Map;
  * 以上问题导致报上述BUG
  * 原文：https://www.freesion.com/article/87071247615/
  *
- * @author: 陌溪
- * @create: 2021-05-07-18:44
+ * @author 陌溪
+ * @date  2021-05-07-18:44
  */
 public class SentinelHealthIndicator extends AbstractHealthIndicator {
 

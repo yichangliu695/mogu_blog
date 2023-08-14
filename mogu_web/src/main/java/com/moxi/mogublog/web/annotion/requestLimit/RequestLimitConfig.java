@@ -8,8 +8,8 @@ import org.springframework.stereotype.Component;
 /**
  * RequestLimitConfig
  *
- * @author: 陌溪
- * @create: 2020-03-06-18:58
+ * @author 陌溪
+ * @date  2020-03-06-18:58
  */
 @RefreshScope
 @ConfigurationProperties(prefix = "request-limit")

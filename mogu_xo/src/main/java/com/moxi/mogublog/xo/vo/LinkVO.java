@@ -10,7 +10,7 @@ import lombok.Data;
  * LinkVO
  *
  * @author 陌溪
- * @create: 2019年12月11日12:41:28
+ * @date  2019年12月11日12:41:28
  */
 @Data
 public class LinkVO extends BaseVO<LinkVO> {

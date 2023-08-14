@@ -27,8 +27,8 @@ import java.util.concurrent.TimeUnit;
 /**
  * Feign操作工具类
  *
- * @author: 陌溪
- * @create: 2020-02-29-15:39
+ * @author 陌溪
+ * @date  2020-02-29-15:39
  */
 @Slf4j
 @Component

@@ -4,7 +4,7 @@ package com.moxi.mougblog.base.global;
  * 操作状态码常量
  *
  * @author 陌溪
- * @create: 2020年9月9日17:17:52
+ * @date  2020年9月9日17:17:52
  */
 public class ErrorCode {
 

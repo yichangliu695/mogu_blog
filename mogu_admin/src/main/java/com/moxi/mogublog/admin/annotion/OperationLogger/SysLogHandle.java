@@ -12,6 +12,7 @@ import com.moxi.mogublog.utils.RedisUtil;
 import com.moxi.mogublog.utils.StringUtils;
 import com.moxi.mougblog.base.global.Constants;
 import com.moxi.mougblog.base.holder.AbstractRequestAwareRunnable;
+import lombok.AllArgsConstructor;
 
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
@@ -19,9 +20,10 @@ import java.util.concurrent.TimeUnit;
 /**
  * 异步记录日志
  *
- * @author: 陌溪
- * @create: 2020-03-05-8:59
+ * @author 陌溪
+ * @date  2020-03-05-8:59
  */
+
 public class SysLogHandle extends AbstractRequestAwareRunnable {
 
     /**
@@ -74,16 +76,6 @@ public class SysLogHandle extends AbstractRequestAwareRunnable {
     /**
      * 构造函数
      *
-     * @param ip
-     * @param type
-     * @param requestUrl
-     * @param securityUser
-     * @param paramsJson
-     * @param classPath
-     * @param methodName
-     * @param operationName
-     * @param startTime
-     * @param redisUtil
      */
     public SysLogHandle(String ip, String type, String requestUrl, SecurityUser securityUser,
                         String paramsJson, String classPath,

@@ -4,7 +4,7 @@ package com.moxi.mougblog.base.global;
  * 消息通知
  *
  * @author 陌溪
- * @create: 2019-12-29-20:16
+ * @date  2019-12-29-20:16
  */
 public class BaseMessageConf {
     public static final String OPERATION_SUCCESS = "操作成功";

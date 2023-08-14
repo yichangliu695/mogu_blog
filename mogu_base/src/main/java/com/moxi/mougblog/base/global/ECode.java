@@ -4,7 +4,7 @@ package com.moxi.mougblog.base.global;
  * 状态码常量
  *
  * @author 陌溪
- * @create: 2019-12-04-14:56
+ * @date  2019-12-04-14:56
  */
 public class ECode {
 
