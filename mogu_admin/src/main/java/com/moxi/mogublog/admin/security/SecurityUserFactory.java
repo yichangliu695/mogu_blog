@@ -23,7 +23,7 @@ public final class SecurityUserFactory {
     /**
      * 通过管理员Admin，生成一个SpringSecurity用户
      *
-     * @param admin
+     * @param admin 管理员信息
      * @return
      */
     public static SecurityUser create(Admin admin) {

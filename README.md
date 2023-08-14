@@ -1,4 +1,4 @@
-# 蘑菇博客
+# 蘑菇社区Plus
 
 <p align=center>
   <a href="http://www.moguit.cn">
@@ -6,25 +6,29 @@
   </a>
 </p>
 <p align=center>
-   蘑菇博客，一个基于微服务架构的前后端分离博客系统
+    基于
+    <a href="https://github.com/moxi624/mogu_blog_v2">
+        蘑菇博客
+    </a>
+   重构升级，一个基于微服务架构的前后端分离门户系统
 </p>
 
 ## 项目特点
 
 - 友好的代码结构及注释，便于阅读及二次开发
 - 实现前后端分离，通过 **Json** 进行数据交互，前端再也不用关注后端技术
-- 引入**Swagger** 文档支持，方便编写 **API** 接口文档。
+- 引入**Swagger** 、**Knife** 文档支持，方便编写 **API** 接口文档。
 - 引入**RabbitMQ** 消息队列，用于邮件发送、更新 **Redis** 和 **Solr**
-- 引入**JustAuth** 第三方登录开源库，支持 **Gitee**、**Github** 账号登录。
-- 引入**ElasticSearch** 和 **Solr** 作为全文检索服务，并支持可插拔配置
+- 引入**JustAuth** 第三方登录开源库，基于OAuth2协议，实现 **Gitee**、**Github** 第三方账号登录。
+- 引入**ElasticSearch** 作为全文检索服务，并支持可插拔配置 (`未完善`)
 - 引入**Github Actions** 工作流，完成蘑菇博客的持续集成、持续部署。
-- 引入七牛云对象存储，同时支持本地文件存储
+- 引入七牛云对象存储，引入腾讯云COS对象存储，同时支持本地文件存储(`未完善`)
 - 引入 **RBAC** 权限管理设计，灵活的权限控制，按钮级别的细粒度权限控制，满足绝大部分的权限需求
 - 引入 **Zipkin** 链路追踪，聚合各业务系统调用延迟数据，可以一眼看出延迟高的服务
 - 采用**自定义参数校验注解**，轻松实现后端参数校验
-- 采用 **AOP** + 自定义注解 + **Redis** 实现限制IP接口访问次数
+- 采用 **AOP** + 自定义注解 + **Redis** 实现操作限流，限制IP接口访问次数
 - 采用自研的评论模块，实现评论邮件通知
-- 采用 **Nacos** 作为服务发现和配置中心，轻松完成项目的配置的维护
+- 采用 **Nacos** 作为服务发现和配置中心，方便系统的统一配置和维护
 - 采用 **Sentinel** 流量控制框架，通过配置再也不怕网站被爆破
 - 支持多种文本编辑器，**Markdown** 编辑器和 **富文本** 编辑器随心切换
 - 采用 **ElasticStack**【**ElasticSearch** + **Beats** + **Kibana** + **Logstash**】[搭建蘑菇博客日志收集]
@@ -43,10 +47,10 @@
 - mogu_admin: 提供admin端API接口服务
 - mogu_base: 存放Base基类,用来被继承或实现，快速推进开发
 - mogu_commons：公共模块，主要用于存放Entity实体类、Feign远程调用接口、以及公共config配置
-- mogu_gateway：网关服务
+- mogu_gateway：网关服务，控制访问规则
 - mogu_monitor：监控服务，集成SpringBootAdmin用于管理和监控SpringBoot应用程序
 - mogu_web：提供web端API接口服务,集成第三方登录
-- mogu_picture： 图片服务，用于图片上传和下载
+- mogu_picture： 图片服务，文件服务，用于图片和文件的上传和下载
 - mogu_sms：消息服务，用于更新ElasticSearch、Solr索引、邮件和短信发送
 - mogu_spider：爬虫服务`（目前还未完善）`
 - mogu_search：搜索服务，ElasticSearch和Solr作为全文检索工具，默认使用SQL搜索
@@ -77,7 +81,6 @@
 - [x] 增加博客详情页目录导航，来源于[vue-side-catalog](https://github.com/yaowei9363/vue-side-catalog)
 - [x] 新建Nacos分支，用于替换Eureka作为服务发现组件和配置中心
 - [x] 使用Sentinel做服务限流和熔断
-- [x] 增加蘑菇博客小程序项目 uniapp_mogu_web，基于[ColorUI](https://github.com/weilanwl/ColorUI) 和 [Uniapp](https://uniapp.dcloud.io/)
 - [x] 富文本编辑器和Markdown编辑器任意切换
 - [x] 使用ELK搭建[蘑菇博客日志收集功能](http://www.moguit.cn/#/info?blogUid=fd9ab58588d93ef792ec72a359a09f6c)
 - [x] 使用Minio [搭建对象存储服务](http://www.moguit.cn/#/info?blogUid=a1058b2d030310e2c5d7b0584e514f1f)
@@ -92,11 +95,12 @@
 - [ ] 让原创文章能够同步到多平台，如：CSDN，掘金，博客园等
 - [ ] 增加博客迁移功能，让其它平台的博客，如：CSDN、博客园，WordPress能够同步到蘑菇博客中
 - [ ] 让邮件发送的邮件携带附件
+- [ ] 集成QQ、WeChat登录
 
 
 ## 项目中初始用户和密码
 
-- **后台登录**：用户：admin，密码：mogu2018
+- **后台登录**：用户：admin，密码：admin
 - 前台登录：用户：mogu2018，密码：mogu2018
 - **Mysql**：用户：root，密码：mogu2018
 - **Redis**：密码：mogu2018

@@ -35,7 +35,6 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
 
-
     @Autowired
     private Audience audience;
 

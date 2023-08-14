@@ -80,7 +80,6 @@ public class LocalFileServiceImpl implements LocalFileService {
         String saveUrl = newPath + newFileName;
 
         // 将图片上传到本地服务器中以及七牛云中
-        BufferedOutputStream out = null;
         FileOutputStream os = null;
         // 输入流
         InputStream inputStream = null;

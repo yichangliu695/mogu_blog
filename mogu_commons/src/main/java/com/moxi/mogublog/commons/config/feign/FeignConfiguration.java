@@ -22,7 +22,6 @@ public class FeignConfiguration {
     /**
      * feign请求拦截器
      *
-     * @return
      */
     @Bean
     public RequestInterceptor requestInterceptor() {

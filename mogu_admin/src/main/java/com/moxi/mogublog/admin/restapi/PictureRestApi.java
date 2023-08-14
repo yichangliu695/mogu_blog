@@ -24,9 +24,9 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 /**
- * 图片表 RestApi
+ * 后台图片接口图片 RestApi
  *
- * @author 陌溪
+ * @author LiuYiChang
  * @date 2018年9月17日16:21:43
  */
 @RestController
@@ -45,7 +45,7 @@ public class PictureRestApi {
 
         // 参数校验
         ThrowableUtils.checkParamArgument(result);
-        log.info("获取图片列表:", pictureVO);
+        log.info("获取图片列表:{}", pictureVO);
         return ResultUtil.successWithData(pictureService.getPageList(pictureVO));
     }
 
@@ -56,7 +56,7 @@ public class PictureRestApi {
     public String add(@Validated({Insert.class}) @RequestBody List<PictureVO> pictureVOList, BindingResult result) {
         // 参数校验
         ThrowableUtils.checkParamArgument(result);
-        log.info("添加图片:", pictureVOList);
+        log.info("添加图片:{}", pictureVOList);
         return pictureService.addPicture(pictureVOList);
     }
 

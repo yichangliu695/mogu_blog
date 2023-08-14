@@ -48,7 +48,7 @@ public class QiniuUtil {
     /**
      * 七牛云上传图片
      *
-     * @param localFilePath
+     * @param localFilePath 上传路径
      * @return
      */
     public String uploadQiniu(File localFilePath, Map<String, String> qiNiuConfig) throws QiniuException {

@@ -8,7 +8,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 标注该该注解的方法需要记录操作日志
+ * 自定义操作日志注解
  *
  * @author 陌溪
  * @date 2020年3月23日09:35:57
