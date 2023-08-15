@@ -20,6 +20,6 @@ public interface AdminFeignClient {
      * 获取系统配置信息
      */
     @RequestMapping(value = "/systemConfig/getSystemConfig", method = RequestMethod.GET)
-    public String getSystemConfig();
+    String getSystemConfig();
 
 }
