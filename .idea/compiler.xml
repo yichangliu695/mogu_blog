@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mogu_web" />
+        <module name="mogu_message" />
+        <module name="mogu_search" />
+        <module name="mogu_utils" />
+        <module name="mogu_admin" />
+        <module name="mogu_xo" />
+        <module name="mogu_base" />
+        <module name="mogu_spider" />
+        <module name="mogu_monitor" />
+        <module name="mogu_commons" />
+        <module name="mogu_gateway" />
+        <module name="mogu_picture" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
