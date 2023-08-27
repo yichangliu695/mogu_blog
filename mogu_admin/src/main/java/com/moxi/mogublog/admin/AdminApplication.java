@@ -22,7 +22,11 @@ import java.util.TimeZone;
 @EnableTransactionManagement
 @SpringBootApplication
 @EnableOpenApi
+<<<<<<< HEAD
 @EnableDiscoveryClient  //服务发现
+=======
+@EnableDiscoveryClient
+>>>>>>> 166ef2ed20543c8edb2243f556f611a9d9990390
 @EnableCaching
 @EnableRabbit
 @EnableFeignClients("com.moxi.mogublog.commons.feign")

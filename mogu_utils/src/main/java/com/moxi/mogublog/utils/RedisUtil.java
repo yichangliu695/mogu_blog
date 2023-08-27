@@ -19,6 +19,10 @@ import java.util.concurrent.TimeUnit;
  * Redis工具类
  *
  * @author WangFan
+<<<<<<< HEAD
+=======
+ * @version
+>>>>>>> 166ef2ed20543c8edb2243f556f611a9d9990390
  * @date 2018-02-24 下午03:09:50
  */
 @Component
