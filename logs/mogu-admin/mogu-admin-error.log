@@ -1,0 +1,193 @@
+[mogu-admin:192.168.213.156:8601] [,] 2023-08-23 10:45:10.439 ERROR 14872 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848-dev] com.alibaba.nacos.client.config.http.ServerHttpAgent [NACOS SocketTimeoutException httpPost] currentServerAddr: http://localhost:8848， err : Read timed out
+[mogu-admin:192.168.213.156:8601] [,] 2023-08-23 10:45:10.440 ERROR 14872 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848-dev] com.alibaba.nacos.client.config.http.ServerHttpAgent no available server, currentServerAddr : http://localhost:8848
+[mogu-admin:192.168.213.156:8601] [,] 2023-08-23 10:45:10.441 ERROR 14872 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848-dev] com.alibaba.nacos.client.config.impl.ClientWorker [fixed-localhost_8848-dev] [check-update] get changed dataId exception
+
+java.net.ConnectException: no available server, currentServerAddr : http://localhost:8848
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:190)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:68)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:441)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:408)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:596)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+[mogu-admin:192.168.213.156:8601] [,] 2023-08-23 10:45:10.441 ERROR 14872 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848-dev] com.alibaba.nacos.client.config.impl.ClientWorker longPolling error : 
+
+java.net.ConnectException: no available server, currentServerAddr : http://localhost:8848
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:190)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:68)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:441)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:408)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:596)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+[mogu-admin:192.168.213.156:8601] [,] 2023-08-23 11:13:26.530 ERROR 14872 [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming [NA] failed to request
+
+java.net.SocketTimeoutException: Read timed out
+	at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+	at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:252)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:292)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:351)
+	at java.base/sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:780)
+	at java.base/sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:723)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1615)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1520)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:527)
+	at com.alibaba.nacos.common.http.client.response.JdkHttpClientResponse.getStatusCode(JdkHttpClientResponse.java:75)
+	at com.alibaba.nacos.common.http.client.handler.AbstractResponseHandler.handle(AbstractResponseHandler.java:43)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:483)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407)
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:378)
+	at com.alibaba.nacos.client.naming.core.HostReactor$UpdateTask.run(HostReactor.java:460)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+[mogu-admin:192.168.213.156:8601] [,] 2023-08-23 11:13:26.532 ERROR 14872 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848-dev] com.alibaba.nacos.client.config.http.ServerHttpAgent [NACOS SocketTimeoutException httpPost] currentServerAddr: http://localhost:8848， err : Read timed out
+[mogu-admin:192.168.213.156:8601] [,] 2023-08-23 11:13:26.536 ERROR 14872 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848-dev] com.alibaba.nacos.client.config.http.ServerHttpAgent no available server, currentServerAddr : http://localhost:8848
+[mogu-admin:192.168.213.156:8601] [,] 2023-08-23 11:13:26.536 ERROR 14872 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848-dev] com.alibaba.nacos.client.config.impl.ClientWorker [fixed-localhost_8848-dev] [check-update] get changed dataId exception
+
+java.net.ConnectException: no available server, currentServerAddr : http://localhost:8848
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:190)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:68)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:441)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:408)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:596)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+[mogu-admin:192.168.213.156:8601] [,] 2023-08-23 11:13:26.537 ERROR 14872 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848-dev] com.alibaba.nacos.client.config.impl.ClientWorker longPolling error : 
+
+java.net.ConnectException: no available server, currentServerAddr : http://localhost:8848
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:190)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:68)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:441)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:408)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:596)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+[mogu-admin:192.168.213.156:8601] [,] 2023-08-23 11:57:41.155 ERROR 14872 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848-dev] com.alibaba.nacos.client.config.http.ServerHttpAgent [NACOS SocketTimeoutException httpPost] currentServerAddr: http://localhost:8848， err : Read timed out
+[mogu-admin:192.168.213.156:8601] [,] 2023-08-23 11:57:41.155 ERROR 14872 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848-dev] com.alibaba.nacos.client.config.http.ServerHttpAgent no available server, currentServerAddr : http://localhost:8848
+[mogu-admin:192.168.213.156:8601] [,] 2023-08-23 11:57:41.155 ERROR 14872 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848-dev] com.alibaba.nacos.client.config.impl.ClientWorker [fixed-localhost_8848-dev] [check-update] get changed dataId exception
+
+java.net.ConnectException: no available server, currentServerAddr : http://localhost:8848
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:190)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:68)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:441)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:408)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:596)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+[mogu-admin:192.168.213.156:8601] [,] 2023-08-23 11:57:41.155 ERROR 14872 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848-dev] com.alibaba.nacos.client.config.impl.ClientWorker longPolling error : 
+
+java.net.ConnectException: no available server, currentServerAddr : http://localhost:8848
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:190)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:68)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:441)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:408)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:596)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+[mogu-admin:192.168.213.156:8601] [,] 2023-08-23 12:21:10.520 ERROR 14872 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848-dev] com.alibaba.nacos.client.config.http.ServerHttpAgent [NACOS SocketTimeoutException httpPost] currentServerAddr: http://localhost:8848， err : Read timed out
+[mogu-admin:192.168.213.156:8601] [,] 2023-08-23 12:21:10.521 ERROR 14872 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848-dev] com.alibaba.nacos.client.config.http.ServerHttpAgent no available server, currentServerAddr : http://localhost:8848
+[mogu-admin:192.168.213.156:8601] [,] 2023-08-23 12:21:10.521 ERROR 14872 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848-dev] com.alibaba.nacos.client.config.impl.ClientWorker [fixed-localhost_8848-dev] [check-update] get changed dataId exception
+
+java.net.ConnectException: no available server, currentServerAddr : http://localhost:8848
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:190)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:68)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:441)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:408)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:596)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+[mogu-admin:192.168.213.156:8601] [,] 2023-08-23 12:21:10.521 ERROR 14872 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848-dev] com.alibaba.nacos.client.config.impl.ClientWorker longPolling error : 
+
+java.net.ConnectException: no available server, currentServerAddr : http://localhost:8848
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:190)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:68)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:441)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:408)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:596)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+[mogu-admin:192.168.213.156:8601] [,] 2023-08-23 14:29:43.193 ERROR 14872 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848-dev] com.alibaba.nacos.client.config.http.ServerHttpAgent [NACOS SocketTimeoutException httpPost] currentServerAddr: http://localhost:8848， err : Read timed out
+[mogu-admin:192.168.213.156:8601] [,] 2023-08-23 14:29:43.193 ERROR 14872 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848-dev] com.alibaba.nacos.client.config.http.ServerHttpAgent no available server, currentServerAddr : http://localhost:8848
+[mogu-admin:192.168.213.156:8601] [,] 2023-08-23 14:29:43.193 ERROR 14872 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848-dev] com.alibaba.nacos.client.config.impl.ClientWorker [fixed-localhost_8848-dev] [check-update] get changed dataId exception
+
+java.net.ConnectException: no available server, currentServerAddr : http://localhost:8848
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:190)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:68)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:441)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:408)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:596)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+[mogu-admin:192.168.213.156:8601] [,] 2023-08-23 14:29:43.193 ERROR 14872 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848-dev] com.alibaba.nacos.client.config.impl.ClientWorker longPolling error : 
+
+java.net.ConnectException: no available server, currentServerAddr : http://localhost:8848
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:190)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:68)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:441)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:408)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:596)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
